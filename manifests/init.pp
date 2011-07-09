@@ -5,8 +5,9 @@ class ddclient (
   ) {
 
   include ddclient::params
-  $conf = $ddclient::params::conf
-  $cmd  = $ddclient::params::cmd
+  $conf     = $ddclient::params::conf
+  $cmd      = $ddclient::params::cmd
+  $package  = $ddclient::params::package
 
   package { "ddclient": ensure => installed; }
 
