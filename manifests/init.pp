@@ -9,7 +9,7 @@ class ddclient (
   $cmd      = $ddclient::params::cmd
   $package  = $ddclient::params::package
 
-  package { "ddclient": ensure => installed; }
+  package { $package: ensure => installed; }
 
   file {
     "$conf":
