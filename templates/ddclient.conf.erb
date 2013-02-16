@@ -2,9 +2,8 @@
 #
 # /etc/ddclient.conf
 
-protocol=dyndns2
-use=web, web=checkip.dyndns.com, web-skip='IP Address'
-server=members.dyndns.org
-login=<%= user %>
-password='<%= pass %>'
-<%= host %>
+protocol=no-ip, \
+use=if, if=eth2, server=dynupdate.no-ip.com, login=<%= user %>, password='<%= pass %>', <%= ::hostname %>.no-ip.net
+use=if, if=eth0, server=dynupdate.no-ip.com, login=<%= user %>, password='<%= pass %>', <%= ::hostname %>.hopto.me
+
+
